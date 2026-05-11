@@ -12,7 +12,12 @@ import os
 import argparse
 
 sys.path.insert(0, os.path.dirname(__file__))
-
+# ── Windows: paksa UTF-8 agar box-drawing characters tidak error ──
+if sys.platform == "win32":
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+    os.system("chcp 65001 > nul")  # set code page ke UTF-8
 from utils.cli import CLI
 from utils.banner import print_banner
 from utils.menu import MainMenu
