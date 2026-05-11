@@ -168,7 +168,7 @@ Script yang di-generate perlu disesuaikan dengan kondisi jaringan aktual kamu.
 
 ## 📜 License
 
-MIT License — bebas digunakan dan dimodifikasi.
+License — bebas digunakan dan tidak untuk dimodifikasi.
 
 ---
 
